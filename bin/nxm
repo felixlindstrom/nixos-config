@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]
+then
+	echo "Missing what command"
+	exit 1
+fi
+
+command=$1
+host=$(hostname)
+
+if [ $command == "hm" ]
+then
+	echo "Applying home-manager for host ${host}"
+	home-manager switch --flake ".#felix@${host}"
+	hyprctl reload
+	exit 0
+fi
+
+if [ $command == "system" ]
+then
+	echo "Rebuilding system for host ${host}"
+	nixos-rebuild switch --flake ".#${host}"
+	exit 0
+fi
+
+echo "Unknown command command:${command} host:${host}"
+exit 1
