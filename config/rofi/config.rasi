@@ -1,0 +1,125 @@
+configuration {
+    drun {
+        display-name: " ";
+    }
+    timeout {
+        delay: 10;
+        action: "kb-cancel";
+    }
+    me-select-entry: ""; 
+    show-icons: false;
+    fixed-num-lines: false;
+    font: "JetBrainsMono Nerd Font Bold 9";
+}
+
+* {
+    bg: #262828;
+    bg-alt-1: #2E2E2E;
+    bg-dark: #1D2021;
+    bg-alt-2: #99917f;
+    text: #282828;
+    text-alt: #fff;
+    text-alt-2: rgba(235, 219, 161, 0.5);
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 15%;
+    border: 0;
+    background-color: @bg;
+    padding: 0.5em;
+}
+
+mainbox {
+    background-color: @bg;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    background-color: @bg;
+    text-color: @text-alt;
+    children: [prompt, entry, num-filtered-rows, textbox-custom, num-rows];
+}
+
+prompt {
+    background-color: inherit;
+    text-color: @text-alt;
+    padding: 0.5em 0.5em 0.5em 0;
+}
+
+entry {
+    background-color: inherit;
+    text-color: @text-alt;
+    placeholder: "Run";
+    placeholder-color: @text-alt-2;
+    padding: 0.5em 0 0.5em 0;
+}
+
+textbox-custom{
+    background-color: inherit;
+    text-color: @text-alt-2;
+    content: "/";
+    padding: 0.2em;
+    expand: false;
+}
+
+num-filtered-rows, num-rows {
+    background-color: inherit;
+    text-color: @text-alt;
+}
+
+prompt, entry, element-icon, element-text, num-filtered-rows, case-indicator, num-rows, textbox-custom {
+    vertical-align: 0.5;
+background-color: inherit;
+text-color: inherit;
+}
+
+listview {
+    background-color: inherit;
+    padding: 0.5em 0 0.5em 0;
+    lines: 5;
+    children: [element];
+    scrollbar: true;
+    fixed-height: false;
+    dynamic: false; /*True if the size should change when filtering the list, False if it should
+         keep the original height.*/
+    fixed-columns: true;
+}
+
+scrollbar {
+    background-color: @bg-alt-1;
+    handle-color: @text-alt;
+    margin: 0 0 0 0.5em;
+}
+
+element-icon {
+    background-color: @bg;
+    padding: 0 0.5em 0 0;
+}
+
+ element {
+   border: 0;
+   padding: 0;
+ }
+
+element selected {
+    background-color: @bg;
+    text-color: @text;
+}
+
+element-text {
+    background-color: @bg;
+    text-color: @text-alt;
+    padding: 0.25em 0.2em 0.25em 0.2em;
+}
+
+element-text selected {
+    background-color: @text-alt;
+    text-color: @text;
+    padding: 0.2em 0.2em 0.2em 0.2em;
+}
+
