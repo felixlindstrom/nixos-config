@@ -4,6 +4,7 @@
     ./chat.nix
     ./desktop.nix
     ./development.nix
+      ./dropbox.nix
     ./insomnia.nix
     ./media.nix
     ./system.nix
