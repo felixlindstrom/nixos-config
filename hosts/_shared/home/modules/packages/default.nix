@@ -4,9 +4,10 @@
     ./chat.nix
     ./desktop.nix
     ./development.nix
-      ./dropbox.nix
+    ./dropbox.nix
     ./insomnia.nix
     ./media.nix
+    ./office.nix
     ./system.nix
   ];
   gtk = {
