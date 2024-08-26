@@ -5,6 +5,7 @@
     ./chromium.nix
     ./clipboard.nix
     ./databases.nix
+    ./email.nix
     ./git.nix
     ./hyprland.nix
     ./neovim.nix
