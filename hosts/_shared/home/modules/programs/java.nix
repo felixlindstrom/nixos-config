@@ -1,0 +1,5 @@
+{
+  programs.jdk = {
+    enable = true;
+  };
+}
