@@ -1,13 +1,13 @@
 { inputs, ... }:
 {
   imports = [
-    ./ags.nix
     ./chromium.nix
     ./clipboard.nix
     ./databases.nix
     ./email.nix
     ./git.nix
     ./hyprland.nix
+    ./java.nix
     ./neovim.nix
     ./node.nix
     ./rofi.nix

@@ -1,10 +1,8 @@
-{ ... }:
 {
-  programs.thunderbird = {
-    enable = true;
-    mail = {
-      defaultClient = true;
-      defaultClientMailto = true;
+  programs.thunderbird.enable = true;
+  programs.thunderbird.profiles = {
+    default = {
+        isDefault = true;
     };
   };
 }

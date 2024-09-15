@@ -16,10 +16,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Ags
-    ags.url = "github:Aylur/ags";
-    ags.inputs.nixpkgs.follows = "nixpkgs";
-
     # Hyprland
     hyprpaper.url = "github:hyprwm/hyprpaper";
   };
@@ -27,6 +23,7 @@
   outputs =
     { self
     , nixpkgs
+    , nixpkgs-unstable
     , home-manager
     , ...
     } @ inputs:
@@ -35,7 +32,9 @@
       systems = [
         "x86_64-linux"
       ];
+      system = "x86_64-linux";
       forAllSystems = nixpkgs.lib.genAttrs systems;
+      unstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
     in
     {
       nixosConfigurations = {
@@ -56,7 +55,7 @@
       homeConfigurations =
         let
           hmConfig = home-manager.lib.homeManagerConfiguration;
-          extraSpecialArgs = { inherit inputs outputs; };
+          extraSpecialArgs = { inherit inputs outputs unstable; };
         in
         {
           "felix@malkuth" = hmConfig {

@@ -1,5 +1,5 @@
 {
-  programs.jdk = {
+  programs.java = {
     enable = true;
   };
 }

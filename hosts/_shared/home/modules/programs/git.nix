@@ -7,8 +7,5 @@ in
     enable = true;
     userName = userName;
     userEmail = email;
-    init = {
-      defaultBranch = "main";
-    };
   };
 }

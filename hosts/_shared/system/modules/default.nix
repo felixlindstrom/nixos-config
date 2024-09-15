@@ -7,7 +7,9 @@
     ./docker.nix
     ./environment.nix
     ./file-manager.nix
+    ./gpg.nix
     ./hyprland.nix
+    #./sway.nix
     ./i18n.nix
     ./networking.nix
     ./nixsettings.nix

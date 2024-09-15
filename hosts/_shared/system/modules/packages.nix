@@ -1,10 +1,11 @@
 { config, pkgs, inputs, ... }:
 {
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     pkgs.neovim
     pkgs.wezterm
     pkgs.wireplumber
     pkgs.rofi-wayland
     pkgs.hyprpaper
+    pkgs.pinentry-curses
   ];
 }

@@ -1,6 +1,6 @@
-  { pkgs, ... }:
+{ pkgs, ... }:
 {
-  imports = [
+    home.packages = [
     pkgs.maestral
     pkgs.maestral-gui
   ];

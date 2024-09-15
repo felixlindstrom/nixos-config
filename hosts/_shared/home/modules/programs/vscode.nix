@@ -1,6 +1,7 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, unstable, ... }:
 {
   programs.vscode = {
+    package = unstable.vscode;
     enable = true;
     mutableExtensionsDir = false;
     extensions = with pkgs.vscode-marketplace; [
@@ -37,6 +38,8 @@
       zengxingxin.sort-js-object-keys
       esbenp.prettier-vscode
       jnoortheen.nix-ide
+      redhat.java
+      vscjava.vscode-java-pack
     ];
   };
 }
