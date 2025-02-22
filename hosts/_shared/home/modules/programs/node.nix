@@ -2,6 +2,6 @@
 {
   home.packages = [
     pkgs.nodejs
-    pkgs.xsv
+    pkgs.xan
   ];
 }
