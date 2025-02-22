@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   imports = [
-    ./chromium.nix
+    ./browser.nix
     ./clipboard.nix
     ./databases.nix
     ./email.nix

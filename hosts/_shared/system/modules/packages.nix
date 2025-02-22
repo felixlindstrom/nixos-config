@@ -7,5 +7,6 @@
     pkgs.rofi-wayland
     pkgs.hyprpaper
     pkgs.pinentry-curses
+    (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true;}) {})
   ];
 }
