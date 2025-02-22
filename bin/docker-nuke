@@ -1,3 +1,0 @@
-docker system prune --volumes --all
-docker image prune --all
-

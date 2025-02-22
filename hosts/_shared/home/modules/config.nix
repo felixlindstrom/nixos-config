@@ -5,7 +5,7 @@ let
   assetsDir = ../../../../assets;
 
   mkooss = config.lib.file.mkOutOfStoreSymlink;
-  linkConfig = filePath: mkooss "${config.home.homeDirectory}/Projects/nixos-config/config/${filePath}"; # Change this to be relative..
+  linkConfig = filePath: mkooss "${config.users.users.felix.home}/Projects/nixos-config/config/${filePath}"; # Change this to be relative..
 in
 {
   xdg.configFile."hypr" = {
@@ -13,6 +13,10 @@ in
     recursive = true;
   };
   #xdg.configFile."waybar".source = linkConfig "waybar";
+  # xdg.configFile.rofi = {
+  #   source = config.lib.file.mkOutOfStoreSymlink "${configDir}/rofi";
+  #   recursive = true;
+  # };
   home.file = {
     # ".config/hypr".source = "${configDir}/hypr";
     ".config/sway".source = "${configDir}/sway";

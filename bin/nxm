@@ -17,6 +17,13 @@ then
 	exit 0
 fi
 
+if [ $command == "update" ]
+then
+  echo "Updating flake"
+  nix flake update
+  exit 0
+fi
+
 if [ $command == "system" ]
 then
 	echo "Rebuilding system for host ${host}"

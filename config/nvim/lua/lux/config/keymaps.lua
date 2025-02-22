@@ -6,7 +6,7 @@ local diagnostic_goto = function(next, severity)
   end
 end
 
-local ts_repeat_move = require "nvim-treesitter.textobjects.repeatable_move"
+local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
 -- vim way: ; goes to the direction you were moving.
 vim.keymap.set({ "n", "x", "o" }, ";", ts_repeat_move.repeat_last_move)
 vim.keymap.set({ "n", "x", "o" }, ",", ts_repeat_move.repeat_last_move_opposite)
@@ -65,8 +65,8 @@ local maps = {
     { "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" } },
 
     -- Split lines
-    { "<leader>js", "<cmd>TSJSplit<cr>", { desc = "Split node"}},
-    { "<leader>jj", "<cmd>TSJSplit<cr>", { desc = "Join node"}},
+    { "<leader>js", "<cmd>TSJSplit<cr>", { desc = "Split node" } },
+    { "<leader>jj", "<cmd>TSJSplit<cr>", { desc = "Join node" } },
 
     -- Oil
     { "-", "<cmd>Oil<cr>", { desc = "Open parent directory " } },
@@ -103,15 +103,27 @@ local maps = {
     { "<leader>cF", "<cmd>AerialToggle<cr>", { desc = "Open function/methods calls" } },
 
     -- Random
-    { "<leader>St", function() Snacks.scratch() end, { desc = 'Open scratch' } },
-    { "<leader>Ss", function() Snacks.scratch.select() end, { desc = 'Select scratch' } },
+    {
+      "<leader>St",
+      function()
+        Snacks.scratch()
+      end,
+      { desc = "Open scratch" },
+    },
+    {
+      "<leader>Ss",
+      function()
+        Snacks.scratch.select()
+      end,
+      { desc = "Select scratch" },
+    },
 
     -- Git
     { "<leader>gg", "<cmd>Neogit<cr>", { desc = "Neogit" } },
     { "<leader>gb", "<cmd>Gitsigns blame_line<cr>", { desc = "Blame line" } },
 
-    { "<leader>gdf", "<cmd>DiffviewFileHistory %<cr>", { desc = "File History"}},
-    { "<leader>gdw", "<cmd>DiffviewOpen<cr>", { desc = "Working diff"}},
+    { "<leader>gdf", "<cmd>DiffviewFileHistory %<cr>", { desc = "File History" } },
+    { "<leader>gdw", "<cmd>DiffviewOpen<cr>", { desc = "Working diff" } },
 
     { "<leader>gsp", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview hunk" } },
     { "<leader>gsh", "<cmd>Gitsigns stage_hunk<cr>", { desc = "Stage hunk" } },
@@ -135,7 +147,7 @@ local maps = {
     { "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" } },
 
     -- Save
-    { "<C-s>", "<cmd>w<CR>", { desc = "Split window below", remap = true } },
+    { "<C-s>", "<cmd>silent! wall<CR>", { desc = "Save", remap = true } },
 
     -- Search
     { "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" } },
