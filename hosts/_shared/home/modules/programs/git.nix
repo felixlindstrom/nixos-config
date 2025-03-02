@@ -7,13 +7,13 @@ in
     enable = true;
     userName = userName;
     userEmail = email;
-    # extraConfig = {
-    #   url = {
-    #     "git@github.com" = {
-    #       insteadOf = "https://github.com";
-    #     };
-    #   };
-    # };
+    extraConfig = {
+      url = {
+        "ssh://git@github.com" = {
+          insteadOf = "https://github.com";
+        };
+      };
+    };
   };
 
   programs.lazygit = {
