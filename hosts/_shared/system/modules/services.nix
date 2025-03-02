@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
 {
+  services.fwupd.enable = true;
+
   services.xserver = {
     enable = true;
     xkb.layout = "us, se";

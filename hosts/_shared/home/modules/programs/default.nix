@@ -6,6 +6,7 @@
     ./databases.nix
     ./email.nix
     ./git.nix
+    ./go.nix
     ./hyprland.nix
     ./java.nix
     ./neovim.nix

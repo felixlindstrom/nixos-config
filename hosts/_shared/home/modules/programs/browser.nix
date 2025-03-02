@@ -87,14 +87,14 @@ let
         };
       };
     };
-  # programs.chromium = {
-  #   enable = true;
-  #   extensions = [
-  #     "dbepggeogbaibhgnhhndojpepiihcmeb" # Vimium
-  #     "gejiddohjgogedgjnonbofjigllpkmbf" # Chromium
-  #     "hlepfoohegkhhmjieoechaddaejaokhf" # Github Refined
-  #   ];
-  # };
+  programs.chromium = {
+    enable = true;
+    extensions = [
+      "dbepggeogbaibhgnhhndojpepiihcmeb" # Vimium
+      "gejiddohjgogedgjnonbofjigllpkmbf" # Chromium
+      "hlepfoohegkhhmjieoechaddaejaokhf" # Github Refined
+    ];
+  };
 
   xdg.mimeApps.defaultApplications = {
     "text/html" = "firefox.desktop";
