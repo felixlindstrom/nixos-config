@@ -2,6 +2,7 @@
 {
   imports = [
     ./browser.nix
+    ./csv.nix
     ./clipboard.nix
     ./databases.nix
     ./email.nix
