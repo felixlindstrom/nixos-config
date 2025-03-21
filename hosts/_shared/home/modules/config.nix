@@ -1,10 +1,14 @@
-{ ... }:
+{ config, ... }:
 let
   configDir = ../../../../config;
   binDir = ../../../../bin;
   assetsDir = ../../../../assets;
+
+  mkooss = config.lib.file.mkOutOfStoreSymlink;
+  linkConfig = filePath: mkooss "${config.home.homeDirectory}/Projects/nixos-config/config/${filePath}"; # Change this to be relative..
 in
 {
+  xdg.configFile."niri/config.kdl".source = linkConfig "niri/config.kdl";
   xdg.configFile."hypr" = {
     source = "${configDir}/hypr";
     recursive = true;

@@ -1,0 +1,195 @@
+// Monitors
+output "Dell Inc. DELL P2423D 31CSVP3" {
+    scale 1
+    mode "2560x1440@75"
+    transform "normal"
+    position x=0 y=0
+}
+output "Dell Inc. DELL P2723DE GQ320N3" {
+    scale 1
+    mode "2560x1440@75"
+    transform "normal"
+    position x=2560 y=0
+}
+output "Dell Inc. DELL P2423D 5QRC1L3" {
+    scale 1
+    mode "2560x1440@75"
+    transform "normal"
+    position x=5120 y=0
+}
+
+input {
+    keyboard {
+        xkb {
+            layout "eu"
+            options "ctrl:nocaps" // altwin:swap_alt_win
+        }
+        repeat-delay 300
+        repeat-rate 90
+    }
+
+    warp-mouse-to-focus
+}
+
+layout {
+    gaps 4
+    center-focused-column "never"
+    always-center-single-column
+
+    preset-column-widths {
+        // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
+        // Proportion sets the width as a fraction of the output width, taking gaps into account.
+        // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
+        // The default preset widths are 1/3, 1/2 and 2/3 of the output.
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 1
+        active-color "#7fc8ff"
+        inactive-color "#505050"
+    }
+
+    border {
+        off
+        width 1
+        active-color "#ffc87f"
+        inactive-color "#505050"
+    }
+}
+
+spawn-at-startup "xwayland-satellite"
+environment {
+    DISPLAY ":0"
+}
+spawn-at-startup "waybar"
+spawn-at-startup "hyprpaper"
+
+spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
+spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+
+animations {
+    // Slow down all animations by this factor. Values below 1 speed them up instead.
+    // slowdown 3.0
+    off
+    slowdown 0.5
+}
+
+window-rule {
+    draw-border-with-background false
+}
+
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+}
+
+binds {
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    Mod+Return { spawn "wezterm"; }
+    Mod+D { spawn "rofi" "-show" "drun"; }
+    Mod+Tab { spawn "rofi" "-modi" "window" "-show" "window"; }
+    Mod+Q { close-window; }
+
+    // CLipboard
+    Mod+V { spawn "sh" "-c" "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
+
+    // Media
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    Mod+H     { focus-column-left; }
+    Mod+J     { focus-window-down; }
+    Mod+K     { focus-window-up; }
+    Mod+L     { focus-column-right; }
+
+    Mod+Ctrl+H     { move-column-left; }
+    Mod+Ctrl+J     { move-window-down; }
+    Mod+Ctrl+K     { move-window-up; }
+    Mod+Ctrl+L     { move-column-right; }
+
+    Mod+Shift+H     { focus-monitor-left; }
+    Mod+Shift+L     { focus-monitor-right; }
+
+    Mod+Shift+Ctrl+H     { move-window-to-monitor-left; } // move-column-to-monitor-left
+    Mod+Shift+Ctrl+L     { move-window-to-monitor-right; }
+
+    Mod+U              { focus-workspace-down; }
+    Mod+I              { focus-workspace-up; }
+    Mod+Ctrl+U         { move-column-to-workspace-down; }
+    Mod+Ctrl+I         { move-column-to-workspace-up; }
+
+
+    // You can refer to workspaces by index. However, keep in mind that
+    // niri is a dynamic workspace system, so these commands are kind of
+    // "best effort". Trying to refer to a workspace index bigger than
+    // the current workspace count will instead refer to the bottommost
+    // (empty) workspace.
+    //
+    // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
+    // will all refer to the 3rd workspace.
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+Ctrl+1 { move-column-to-workspace 1; }
+    Mod+Ctrl+2 { move-column-to-workspace 2; }
+    Mod+Ctrl+3 { move-column-to-workspace 3; }
+    Mod+Ctrl+4 { move-column-to-workspace 4; }
+    Mod+Ctrl+5 { move-column-to-workspace 5; }
+    Mod+Ctrl+6 { move-column-to-workspace 6; }
+    Mod+Ctrl+7 { move-column-to-workspace 7; }
+    Mod+Ctrl+8 { move-column-to-workspace 8; }
+    Mod+Ctrl+9 { move-column-to-workspace 9; }
+
+    // Group bindings
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+Shift+BracketLeft  { consume-window-into-column; } // Consume one window from the right to the bottom of the focused column.
+    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+Shift+Mod+BracketRight { expel-window-from-column; } // Expel the bottom window from the focused column to the right.
+
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+
+    Mod+C { center-column; }
+
+    // Fine tune
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    // Toggle tabbed column display mode.
+    // Windows in this column will appear as vertical tabs,
+    // rather than stacked on top of each other.
+    Mod+Ctrl+W { toggle-column-tabbed-display; }
+
+    Mod+S { screenshot; }
+    Mod+Ctrl+S { screenshot-screen; }
+    Mod+Shift+S { screenshot-window; }
+
+    // The quit action will show a confirmation dialog to avoid accidental exits.
+    Mod+Shift+Escape { quit; }
+    Mod+Escape { spawn "hyprlock"; }
+}

@@ -4,4 +4,5 @@
   programs.wezterm = {
     enable = true;
   };
+  programs.alacritty.enable = true;
 }

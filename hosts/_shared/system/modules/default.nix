@@ -1,7 +1,8 @@
 { ... }:
 {
   imports = [
-    #./sway.nix
+    #./wm/hyprland.nix
+    #./wm/sway.nix
     ./1password.nix
     ./bluetooth.nix
     ./boot.nix
@@ -10,7 +11,6 @@
     ./file-manager.nix
     ./gpg.nix
     ./greeter.nix
-    ./hyprland.nix
     ./i18n.nix
     ./networking.nix
     ./nixsettings.nix
@@ -19,5 +19,6 @@
     ./security.nix
     ./services.nix
     ./users.nix
+    ./wm/niri.nix
   ];
 }

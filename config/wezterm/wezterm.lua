@@ -32,5 +32,5 @@ return {
 
 	front_end = "WebGpu",
 	webgpu_power_preference = "HighPerformance",
-	enable_wayland = false,
+	enable_wayland = true,
 }

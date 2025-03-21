@@ -4,6 +4,7 @@
 }: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
   hyprland-session = "${pkgs.hyprland}/share/wayland-sessions";
+  niri-session = "${pkgs.niri}/share/wayland-sessions";
 in {
   # services.xserver.displayManager.gdm.enable = true;
 
@@ -11,7 +12,7 @@ in {
     enable = true;
     settings = {
       default_session = {
-        command = "${tuigreet} --time --remember --remember-session --sessions ${hyprland-session}";
+        command = "${tuigreet} --time --remember --remember-session --sessions ${niri-session}";
         user = "greeter";
       };
     };

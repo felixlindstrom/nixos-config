@@ -1,12 +1,12 @@
 { ... }:
 let
   variables = {
-    BROWSER = "chromium";
+    BROWSER = "firefox";
     EDITOR = "nvim";
     TERMINAL = "wezterm";
     NIXOS_OZONE_WL = "1";
-    XDG_CURRENT_DESKTOP = "Hyprland";
-    XDG_SESSION_DESKTOP = "Hyprland";
+    XDG_CURRENT_DESKTOP = "niri";
+    XDG_SESSION_DESKTOP = "niri";
     XDG_SESSION_TYPE = "wayland";
     #XDG_CACHE_HOME = "\${HOME}/.cache";
     #XDG_CONFIG_HOME = "\${HOME}/.config";
