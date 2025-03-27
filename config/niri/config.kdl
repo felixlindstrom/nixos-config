@@ -32,7 +32,7 @@ input {
 }
 
 layout {
-    gaps 4
+    gaps 0
     center-focused-column "never"
     always-center-single-column
 
@@ -49,15 +49,16 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
+        off
         width 1
         active-color "#7fc8ff"
         inactive-color "#505050"
     }
 
     border {
-        off
-        width 1
-        active-color "#ffc87f"
+        width 2
+        //active-color "#ffc87f"
+        active-color "#ff0000"
         inactive-color "#505050"
     }
 }
@@ -85,7 +86,8 @@ animations {
 }
 
 window-rule {
-    draw-border-with-background false
+    match title="Confirm Exit"
+    open-floating true
 }
 
 window-rule {
@@ -104,6 +106,7 @@ binds {
 
     // CLipboard
     Mod+V { spawn "sh" "-c" "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
+    Mod+E { spawn "thunar"; }
 
     // Media
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
