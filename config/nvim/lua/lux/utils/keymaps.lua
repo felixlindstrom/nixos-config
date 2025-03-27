@@ -9,19 +9,7 @@ function M.get()
   M._keys = {
     { "<leader>cl", "<cmd>LspInfo<cr>", desc = "Lsp Info" },
 
-    -- Telescoped
-    { "gd", function() require("telescope.builtin").lsp_definitions({ reuse_win = true }) end, desc = "Goto Definition", has = "definition" },
-    { "gr", "<cmd>Telescope lsp_references win.position=right<cr>", desc = "References", nowait = true },
-    { "gI", function() require("telescope.builtin").lsp_implementations({ reuse_win = true }) end, desc = "Goto Implementation" },
-    { "gy", function() require("telescope.builtin").lsp_type_definitions({ reuse_win = true }) end, desc = "Goto T[y]pe Definition" },
-
-    -- Original
-    -- { "gd", vim.lsp.buf.definition, desc = "Goto Definition", has = "definition" },
-    -- { "gr", vim.lsp.buf.references, desc = "Goto References", nowait = true, has = "references" },
-    -- { "gI", vim.lsp.buf.implementation, desc = "Goto Implementation" },
-    -- { "gy", vim.lsp.buf.type_definition, desc = "Goto T[y]pe Definition" },
-    --
-    { "gD", vim.lsp.buf.declaration, desc = "Goto Declaration" },
+    -- LSP
     {
       "K",
       function()
