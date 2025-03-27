@@ -8,7 +8,7 @@ return {
     input = { enabled = false },
     notifier = { enabled = false, timeout = 4000 },
     quickfile = { enabled = true },
-    words = { enabled = true },
+    words = { enabled = false },
     scratch = {
       enabled = false,
     },

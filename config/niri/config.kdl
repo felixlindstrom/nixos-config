@@ -32,7 +32,7 @@ input {
 }
 
 layout {
-    gaps 0
+    gaps 10
     center-focused-column "never"
     always-center-single-column
 
@@ -49,16 +49,17 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        off
-        width 1
-        active-color "#7fc8ff"
+        width 2
+        active-color "#ffc87f"
+        // active-color "#8fc8ff"
         inactive-color "#505050"
     }
 
     border {
+      off
         width 2
-        //active-color "#ffc87f"
-        active-color "#ff0000"
+        active-color "#ffc87f"
+        // active-color "#ff0000"
         inactive-color "#505050"
     }
 }
@@ -74,15 +75,14 @@ spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 
 prefer-no-csd
+window-rule {
+    draw-border-with-background true
+}
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-
 animations {
-    // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
-    off
-    slowdown 0.5
+    // slowdown 0.5
 }
 
 window-rule {
