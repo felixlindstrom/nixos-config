@@ -6,6 +6,7 @@
     ./cursor.nix
     ./desktop.nix
     ./development.nix
+    ./ergo.nix
     ./essentials.nix
     ./fonts.nix
     ./insomnia.nix
