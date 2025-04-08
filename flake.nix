@@ -23,18 +23,13 @@
     } @ inputs:
     let
       inherit (self) outputs;
-      forAllSystems = nixpkgs.lib.genAttrs [
+      systems = [
         "x86_64-linux"
       ];
+      system = "x86_64-linux";
+      forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
-      packages = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./nix/pkgs { inherit pkgs; }
-      );
-
-      overlays = import ./nix/overlays { inherit inputs; };
-
       nixosConfigurations = {
         malkuth = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
@@ -63,7 +58,11 @@
         in
         {
           "felix@malkuth" = hmConfig {
-            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            # pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            pkgs = import inputs.nixpkgs {
+              system = "x86_64-linux";
+              overlays = [import ./nix/overlays {}];
+            };
             extraSpecialArgs = extraSpecialArgs;
             modules = [
               ./hosts/malkuth/home
