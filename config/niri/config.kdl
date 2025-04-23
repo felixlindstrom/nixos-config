@@ -70,6 +70,7 @@ environment {
 }
 spawn-at-startup "waybar"
 spawn-at-startup "hyprpaper"
+spawn-at-startup "sane-break"
 
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"

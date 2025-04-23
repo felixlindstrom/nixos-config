@@ -2,7 +2,6 @@
 , stdenv
 , fetchFromGitHub
 , cmake
-# , libxss
 , qt6Packages
 , kdePackages
 }:
@@ -24,7 +23,6 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    # libxss
     kdePackages.layer-shell-qt
     qt6Packages.qtbase
     qt6Packages.qtmultimedia

@@ -13,5 +13,6 @@
     ./media.nix
     ./office.nix
     ./system.nix
+    ./utils.nix
   ];
 }

@@ -11,6 +11,7 @@
 
   nixpkgs = {
     overlays = [
+      outputs.overlays.additions
     ];
   };
 

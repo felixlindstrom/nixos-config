@@ -1,6 +1,6 @@
 { pkgs, ...}:
 {
   home.packages = [
-    # pkgs.sane-break
+    pkgs.sane-break
   ];
 }
