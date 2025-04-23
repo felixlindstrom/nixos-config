@@ -83,6 +83,20 @@ local maps = {
       { desc = "Format", remap = true },
     },
 
+    -- Substitute
+    {
+      "s",
+      function()
+        require("substitute").operator()
+      end,
+      { desc = "Substitute", noremap = true },
+    },
+    { "ss", require("substitute").line, { desc = "Substitute line", noremap = true } },
+    { "S", require("substitute").eol, { desc = "Substitute eol", noremap = true } },
+    { "sx", require("substitute.exchange").operator, { desc = "Exchange", noremap = true } },
+    { "sxx", require("substitute.exchange").line, { desc = "Exchange line", noremap = true } },
+    { "sxc", require("substitute.exchange").cancel, { desc = "Exchange cancel", noremap = true } },
+
     -- Folding
     {
       "zR",
@@ -139,6 +153,11 @@ local maps = {
     -- Move Lines
     { "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" } },
     { "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" } },
+  },
+
+  x = {
+    { "s", require("substitute").visual, { desc = "Substitute", noremap = true } },
+    { "X", require("substitute.exchange").visual, { desc = "Exchange", noremap = true } },
   },
 
   i = {
