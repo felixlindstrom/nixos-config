@@ -4,6 +4,7 @@
     "modules-left": [ "niri/workspaces"],
     "modules-center": ["niri/window"],
     "modules-right": [
+      "battery",
     	"cpu",
       "memory",
       "network",
@@ -11,6 +12,20 @@
       "tray",
       "clock"
     ],
+    "battery": {
+        "format": "BAT:{capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}h{M}m",
+        "format-charging": "BAT: {capacity}%",
+        "format-full": "BAT:{capacity}%",
+        "interval": 30,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": false,
+        "on-click": "2"
+    },
     "niri/workspaces": {
         "format": "{icon}",
         "on-scroll-up": "hyprctl dispatch workspace e+1",

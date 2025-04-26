@@ -16,12 +16,18 @@ return {
   --     require("github-theme").setup({})
   --   end,
   -- },
+  {
+    "bluz71/vim-moonfly-colors",
+    name = "moonfly",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd("colorscheme moonfly")
+    end,
+  },
 
   {
     "EdenEast/nightfox.nvim",
-    config = function()
-      vim.cmd("colorscheme carbonfox")
-    end,
   },
 
   -- {

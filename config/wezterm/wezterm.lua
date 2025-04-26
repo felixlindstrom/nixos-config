@@ -13,7 +13,8 @@ end)
 return {
 	-- color_scheme = "Catppuccin Mocha",
 	-- color_scheme = "midnight-in-mojave",
-	color_scheme = "Oxocarbon Dark (Gogh)",
+	-- color_scheme = "Oxocarbon Dark (Gogh)",
+	color_scheme = "moonfly",
 	font = wezterm.font_with_fallback({ "JetBrains Mono" }),
 	font_size = 9,
 

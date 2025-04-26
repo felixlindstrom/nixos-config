@@ -30,6 +30,7 @@ local opt = {
   virtualedit = "block",
   wrap = false,
   colorcolumn = "120",
+  spell = true,
 }
 
 for k, v in pairs(g) do
