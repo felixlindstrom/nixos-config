@@ -8,6 +8,7 @@ let
   linkConfig = filePath: mkooss "${config.home.homeDirectory}/Projects/nixos-config/config/${filePath}"; # Change this to be relative..
 in
 {
+  xdg.configFile."starship.toml".source = linkConfig "starship.toml";
   xdg.configFile."niri/config.kdl".source = linkConfig "niri/config.kdl";
   xdg.configFile."hypr" = {
     source = "${configDir}/hypr";

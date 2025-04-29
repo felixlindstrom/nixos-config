@@ -8,6 +8,10 @@ let
       Value = true;
       Status = "locked";
     };
+    lock-zero = {
+      Value = 0;
+      Status = "locked";
+    };
   in
 {
   programs.firefox = {
@@ -37,7 +41,7 @@ let
         OverridePostUpdatePage = "";
         DontCheckDefaultBrowser = true;
         DisplayBookmarksToolbar = "never"; # alternatives: "always" or "newtab"
-        DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
+        DisplayMenuBar = "always"; # alternatives: "always", "never" or "default-on"
         SearchBar = "unified"; # alternative: "separate"
 
         /* ---- EXTENSIONS ---- */
@@ -84,6 +88,7 @@ let
           "browser.newtabpage.activity-stream.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
+          "browser.tabs.inTitlebar" = lock-zero;
         };
       };
     };
