@@ -13,6 +13,9 @@
 
     # Hyprland
     hyprpaper.url = "github:hyprwm/hyprpaper";
+
+    # SentinelOne
+    sentinelone.url = "github:felixlindstrom/sentinelone-nix";
   };
 
   outputs =
