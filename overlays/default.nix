@@ -1,7 +1,3 @@
 { inputs, ... }:
 {
-  nixpkgs = {
-    overlays = {
-    };
-  };
 }

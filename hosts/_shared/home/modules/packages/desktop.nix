@@ -8,7 +8,9 @@
 
   services.mako = {
     enable = true;
-    defaultTimeout = 10000;
-    ignoreTimeout = true;
+    settings = {
+      ignore-timeout = true;
+      default-timeout = 10000;
+    };
   };
 }
