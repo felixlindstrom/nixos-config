@@ -1,8 +1,16 @@
-{ ... }:
+{ outputs, ... }:
 {
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.additions
+      outputs.overlays.modifications
+    ];
+  };
+
   imports = [
     #./wm/hyprland.nix
     #./wm/sway.nix
+    ./sentinelone.nix
     ./1password.nix
     ./bluetooth.nix
     ./boot.nix

@@ -15,7 +15,8 @@
     hyprpaper.url = "github:hyprwm/hyprpaper";
 
     # SentinelOne
-    sentinelone.url = "github:felixlindstrom/sentinelone-nix";
+    # sentinelone.url = "github:felixlindstrom/sentinelone-nix/6ac4d80f772d7f323183819f60ccdf711ff26de9";
+    sentinelone.url = "git+file:///home/felix/Projects/sentinelone-nix";
   };
 
   outputs =

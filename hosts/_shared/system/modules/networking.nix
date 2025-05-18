@@ -2,6 +2,8 @@
 {
     networking.networkmanager.enable = true;
 
+    services.resolved.enable = true;
+
     services.tailscale = {
         enable = true;
         extraUpFlags = [
