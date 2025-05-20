@@ -8,7 +8,6 @@
     ./email.nix
     ./git.nix
     ./go.nix
-    ./hyprland.nix
     ./java.nix
     ./neovim.nix
     ./node.nix
@@ -17,6 +16,7 @@
     ./starship.nix
     ./wezterm.nix
     ./zsh.nix
+    ./wm.nix
   ];
   programs.home-manager.enable = true;
 }

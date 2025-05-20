@@ -13,7 +13,6 @@ if [ $command == "hm" ]
 then
 	echo "Applying home-manager for host ${host}"
 	home-manager switch --flake ".#felix@${host}"
-	hyprctl reload
 	exit 0
 fi
 

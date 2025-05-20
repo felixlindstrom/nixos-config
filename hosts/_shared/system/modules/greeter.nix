@@ -3,7 +3,6 @@
   ...
 }: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
-  hyprland-session = "${pkgs.hyprland}/share/wayland-sessions";
   niri-session = "${pkgs.niri}/share/wayland-sessions";
 in {
   # services.xserver.displayManager.gdm.enable = true;

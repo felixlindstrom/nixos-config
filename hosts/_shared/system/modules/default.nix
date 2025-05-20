@@ -8,8 +8,6 @@
   };
 
   imports = [
-    #./wm/hyprland.nix
-    #./wm/sway.nix
     ./sentinelone.nix
     ./1password.nix
     ./bluetooth.nix
