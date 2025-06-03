@@ -105,7 +105,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return { spawn "wezterm"; }
-    Mod+D { spawn "rofi" "-show" "drun"; }
+    Mod+D { spawn "rofi" "-modi" "drun,calc" "-show" "drun"; }
     Mod+Tab { spawn "rofi" "-modi" "window" "-show" "window"; }
     Mod+Q { close-window; }
 
