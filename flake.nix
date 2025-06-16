@@ -54,6 +54,12 @@
             ./hosts/hod/system/configuration.nix
           ];
         };
+        netsah = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./hosts/netsah/system/configuration.nix
+          ];
+        };
       };
 
       homeConfigurations =
@@ -81,6 +87,13 @@
             extraSpecialArgs = extraSpecialArgs;
             modules = [
               ./hosts/hod/home
+            ];
+          };
+          "felix@netsah" = hmConfig {
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            extraSpecialArgs = extraSpecialArgs;
+            modules = [
+              ./hosts/netsah/home
             ];
           };
         };

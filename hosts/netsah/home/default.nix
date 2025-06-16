@@ -1,0 +1,6 @@
+{ ... }:
+{
+  imports = [
+    ../../_shared/home
+  ];
+}
