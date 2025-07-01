@@ -1,4 +1,14 @@
+debug {
+  // keep-laptop-panel-on-when-lid-is-closed
+}
+
 // Monitors
+output "HDMI-A-1" {
+    scale 1
+    mode "2560x1440@75"
+    transform "normal"
+    position x=0 y=0
+}
 output "Dell Inc. DELL P2423D 31CSVP3" {
     scale 1
     mode "2560x1440@75"
@@ -17,6 +27,7 @@ output "Dell Inc. DELL P2423D 5QRC1L3" {
     transform "normal"
     position x=5120 y=0
 }
+
 
 input {
     keyboard {
@@ -83,7 +94,7 @@ window-rule {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
-    // slowdown 0.5
+    slowdown 1.5
 }
 
 window-rule {
@@ -118,6 +129,9 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    XF86MonBrightnessUp     allow-when-locked=true { spawn "brightnessctl" "set" "-10%"; }
+    XF86MonBrightnessDown   allow-when-locked=true { spawn "brightnessctl" "set" "-10%"; }
 
     Mod+O { toggle-overview; }
 

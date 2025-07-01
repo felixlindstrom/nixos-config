@@ -6,6 +6,7 @@ return {
       adapters = {},
       status = { virtual_text = true },
       output = { open_on_run = true },
+      summary = { follow = false },
       quickfix = {
         open = function()
           require("trouble").open({ mode = "quickfix", focus = false })
