@@ -1,7 +1,13 @@
-{ pkgs, inputs, config, ... }:
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}:
 let
   mkooss = config.lib.file.mkOutOfStoreSymlink;
-  linkConfig = filePath: mkooss "${config.home.homeDirectory}/Projects/nixos-config/config/${filePath}"; # Change this to be relative..
+  linkConfig =
+    filePath: mkooss "${config.home.homeDirectory}/Projects/nixos-config/config/${filePath}"; # Change this to be relative..
   dotconf = linkConfig "nvim";
 in
 {
@@ -14,7 +20,6 @@ in
       clang
       fzf
       gnumake
-
 
       vscode-langservers-extracted
       lua-language-server
@@ -29,6 +34,6 @@ in
 
   programs.ruff = {
     enable = true;
-    settings = {};
+    settings = { };
   };
 }

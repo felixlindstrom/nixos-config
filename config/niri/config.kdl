@@ -43,7 +43,7 @@ input {
 }
 
 layout {
-    gaps 0
+    gaps 5
     center-focused-column "never"
     always-center-single-column
 
@@ -105,6 +105,16 @@ window-rule {
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+}
+
+window-rule {
+    match app-id="1Password"
+    block-out-from "screen-capture"
+}
+
+window-rule {
+    match app-id="Slack"
     block-out-from "screen-capture"
 }
 

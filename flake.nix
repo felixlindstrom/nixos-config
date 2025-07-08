@@ -14,17 +14,20 @@
     # Hyprland
     hyprpaper.url = "github:hyprwm/hyprpaper";
 
+    hardware.url = "github:nixos/nixos-hardware";
+
     # SentinelOne
     # sentinelone.url = "github:felixlindstrom/sentinelone-nix/6ac4d80f772d7f323183819f60ccdf711ff26de9";
     # sentinelone.url = "git+file:///home/felix/Projects/sentinelone-nix";
   };
 
   outputs =
-    { self
-    , nixpkgs
-    , home-manager
-    , ...
-    } @ inputs:
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       inherit (self) outputs;
       systems = [
@@ -58,6 +61,12 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             ./hosts/netsah/system/configuration.nix
+          ];
+        };
+        tiferet = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./hosts/tiferet/system/configuration.nix
           ];
         };
       };
@@ -96,7 +105,13 @@
               ./hosts/netsah/home
             ];
           };
+          "felix@tiferet" = hmConfig {
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            extraSpecialArgs = extraSpecialArgs;
+            modules = [
+              ./hosts/tiferet/home
+            ];
+          };
         };
     };
 }
-
