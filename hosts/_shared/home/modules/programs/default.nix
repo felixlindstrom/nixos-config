@@ -5,6 +5,7 @@
     ./csv.nix
     ./clipboard.nix
     ./databases.nix
+    ./dev.nix
     ./email.nix
     ./git.nix
     ./go.nix

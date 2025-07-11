@@ -1,4 +1,5 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }:
+{
   programs.zsh = {
     enable = true;
     autocd = true;
@@ -27,9 +28,12 @@
     ];
   };
 
+  programs.direnv.enableZshIntegration = true;
+  programs.yazi.enableZshIntegration = true;
+
   programs.fzf = {
     enable = true;
-    #    enableZshIntegration = true;
+    enableZshIntegration = true;
     defaultOptions = [
       "--height 40%"
       "--layout=reverse"
