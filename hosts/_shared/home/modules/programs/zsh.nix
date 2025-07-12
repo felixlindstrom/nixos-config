@@ -63,31 +63,61 @@
       gst = "git status";
       gl = "git pull";
       gc = "git commit -v";
+      "gc!" = "git commit --amend";
       gcb = "git checkout -b";
       gcmsg = "git commit -m";
 
       # Random
       y = "yazi";
-
-      # Editors
-      n = "nvim .";
-
     };
 
     plugins = [
       {
-        name = "fzf-tab";
-        src = pkgs.fetchFromGitHub {
-          owner = "Aloxaf";
-          repo = "fzf-tab";
-          rev = "c2b4aa5ad2532cca91f23908ac7f00efb7ff09c9";
-          sha256 = "1b4pksrc573aklk71dn2zikiymsvq19bgvamrdffpf7azpq6kxl2";
-        };
+        name = "zsh-vi-mode";
+        src = "${pkgs.zsh-vi-mode}/share/zsh-vi-mode";
+      }
+
+      {
+        name = "zsh-fzf-history-search";
+        src = "${pkgs.zsh-fzf-history-search}/share/zsh-fzf-history-search";
+      }
+
+      {
+        name = "zsh-forgit";
+        src = pkgs.zsh-forgit;
+        file = "share/zsh/zsh-forgit/forgit.plugin.zsh";
+      }
+
+      # {
+      #   name = "fzf-tab";
+      #   src = "${pkgs.zsh-fzf-tab}/share/fzf-tab";
+      # }
+
+      # Nix integration (essential for NixOS)
+      {
+        name = "zsh-nix-shell";
+        src = pkgs.zsh-nix-shell;
+        file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
+      }
+
+      # Nix completions
+      {
+        name = "nix-zsh-completions";
+        src = pkgs.nix-zsh-completions;
+        file = "share/zsh/plugins/nix/nix-zsh-completions.plugin.zsh";
+      }
+
+      # Helpful suggestions (learn aliases)
+      {
+        name = "zsh-you-should-use";
+        src = pkgs.zsh-you-should-use;
+        file = "share/zsh/plugins/you-should-use/you-should-use.plugin.zsh";
       }
     ];
 
     initContent = "
       zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+      zvm_after_init_commands+=(eval \"$(fzf --zsh)\")
     ";
   };
 
@@ -105,6 +135,6 @@
       "--inline-info"
     ];
     enable = true;
-    enableZshIntegration = true;
+    # enableZshIntegration = true;
   };
 }

@@ -5,12 +5,16 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
+$nodejs\
 $time\
 $cmd_duration\
 $line_break\
 $character"""
 
 palette = "moonfly"
+
+[nodejs]
+format = '$symbol$version'
 
 [c]
 style = "green"

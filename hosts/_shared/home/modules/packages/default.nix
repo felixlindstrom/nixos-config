@@ -4,7 +4,7 @@
     ./api.nix
     ./chat.nix
     ./cursor.nix
-    ./desktop.nix
+    ./notifications.nix
     ./development.nix
     ./ergo.nix
     ./essentials.nix

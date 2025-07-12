@@ -6,7 +6,6 @@
     ./clipboard.nix
     ./databases.nix
     ./dev.nix
-    ./email.nix
     ./git.nix
     ./go.nix
     ./java.nix
@@ -19,5 +18,4 @@
     ./zsh.nix
     ./wm.nix
   ];
-  # programs.home-manager.enable = true;
 }

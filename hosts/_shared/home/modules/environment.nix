@@ -24,7 +24,7 @@ in
   systemd.user.sessionVariables = variables;
 
   home.sessionPath = [
-    "~/.local/share/npm/bin"
-    "~/bin"
+    "\${HOME}/.local/share/npm/bin"
+    "\${HOME}/bin"
   ];
 }
