@@ -17,9 +17,6 @@ in
     ".config/rofi".source = "${configDir}/rofi";
     ".config/waybar".source = "${configDir}/waybar";
     ".config/wezterm".source = "${configDir}/wezterm";
-    ".config/zsh".source = "${configDir}/zsh";
-    # ".config/hypr".source = "${configDir}/hypr";
-    ".zshrc".source = "${configDir}/zsh/.zshrc";
     "bin".source = "${binDir}";
     "wallpapers".source = "${assetsDir}/wallpapers";
   };

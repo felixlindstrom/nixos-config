@@ -4,8 +4,10 @@
   users.users.felix = {
     isNormalUser = true;
     description = "felix";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
   };
 }

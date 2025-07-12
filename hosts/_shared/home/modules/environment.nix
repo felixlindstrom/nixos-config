@@ -13,8 +13,8 @@ let
     #XDG_BIN_HOME = "\${HOME}/.local/bin";
     #XDG_DATA_HOME = "\${HOME}/.local/share";
 
-    NVM_DIR="\${HOME}/.local/share/nvm";
-    NPM_CONFIG_USERCONFIG="\${HOME}/local/share/npm/config";
+    NVM_DIR = "\${HOME}/.local/share/nvm";
+    NPM_CONFIG_USERCONFIG = "\${HOME}/local/share/npm/config";
     #SSH_AUTH_SOCK="~/.1password/agent.sock";
   };
 in
@@ -22,4 +22,9 @@ in
   xdg.enable = true;
   home.sessionVariables = variables;
   systemd.user.sessionVariables = variables;
+
+  home.sessionPath = [
+    "~/.local/share/npm/bin"
+    "~/bin"
+  ];
 }
