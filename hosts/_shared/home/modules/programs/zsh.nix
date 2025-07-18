@@ -88,10 +88,10 @@
         file = "share/zsh/zsh-forgit/forgit.plugin.zsh";
       }
 
-      # {
-      #   name = "fzf-tab";
-      #   src = "${pkgs.zsh-fzf-tab}/share/fzf-tab";
-      # }
+      {
+        name = "fzf-tab";
+        src = "${pkgs.zsh-fzf-tab}/share/fzf-tab";
+      }
 
       # Nix integration (essential for NixOS)
       {

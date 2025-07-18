@@ -2,8 +2,8 @@
 {
   imports = [
     ./browser.nix
-    ./csv.nix
     ./clipboard.nix
+    ./csv.nix
     ./databases.nix
     ./dev.nix
     ./git.nix
@@ -12,10 +12,11 @@
     ./neovim.nix
     ./node.nix
     ./rofi.nix
+    ./rust.nix
     ./ssh.nix
     ./starship.nix
     ./wezterm.nix
-    ./zsh.nix
     ./wm.nix
+    ./zsh.nix
   ];
 }
