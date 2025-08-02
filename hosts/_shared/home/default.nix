@@ -1,10 +1,12 @@
-{ inputs
-, outputs
-, lib
-, config
-, pkgs
-, ...
-}: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   imports = [
     ./modules
   ];
@@ -13,6 +15,7 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
+      inputs.fenix.overlays.default
     ];
   };
 

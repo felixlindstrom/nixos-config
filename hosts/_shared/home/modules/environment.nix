@@ -26,5 +26,6 @@ in
   home.sessionPath = [
     "\${HOME}/.local/share/npm/bin"
     "\${HOME}/bin"
+    "\${HOME}/.cargo/bin"
   ];
 }

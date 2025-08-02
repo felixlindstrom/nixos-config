@@ -12,8 +12,8 @@
     ./neovim.nix
     ./node.nix
     ./rofi.nix
-    ./rust.nix
     ./ssh.nix
+    ./rust.nix
     ./starship.nix
     ./wezterm.nix
     ./wm.nix

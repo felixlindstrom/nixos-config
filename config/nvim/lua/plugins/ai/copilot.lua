@@ -1,45 +1,46 @@
 return {
-  -- {
-  --   "zbirenbaum/copilot.lua",
-  --   cmd = "Copilot",
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("copilot").setup({
-  --       suggestion = {
-  --         auto_trigger = false,
-  --       },
-  --     })
-  --   end,
-  -- },
-  -- {
-  --   {
-  --     "CopilotC-Nvim/CopilotChat.nvim",
-  --     dependencies = {
-  --       { "github/copilot.vim" },
-  --       { "nvim-lua/plenary.nvim", branch = "master" },
-  --     },
-  --     build = "make tiktoken",
-  --     opts = {
-  --       -- See Configuration section for options
-  --     },
-  --     -- See Commands section for default commands if you want to lazy load on them
-  --   },
-  -- },
-  -- {
-  --   "saghen/blink.cmp",
-  --   dependencies = { "giuxtaposition/blink-cmp-copilot" },
-  --   opts = {
-  --     sources = {
-  --       default = { "copilot" },
-  --       providers = {
-  --         copilot = {
-  --           name = "copilot",
-  --           module = "blink-cmp-copilot",
-  --           score_offset = 100,
-  --           async = true,
-  --         },
-  --       },
-  --     },
-  --   },
-  -- },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+        suggestion = {
+          enabled = false,
+          auto_trigger = false,
+        },
+      })
+    end,
+  },
+  {
+    {
+      "CopilotC-Nvim/CopilotChat.nvim",
+      dependencies = {
+        { "github/copilot.vim" },
+        { "nvim-lua/plenary.nvim", branch = "master" },
+      },
+      build = "make tiktoken",
+      opts = {
+        -- See Configuration section for options
+      },
+      -- See Commands section for default commands if you want to lazy load on them
+    },
+  },
+  {
+    "saghen/blink.cmp",
+    dependencies = { "giuxtaposition/blink-cmp-copilot" },
+    opts = {
+      sources = {
+        default = { "copilot" },
+        providers = {
+          copilot = {
+            name = "copilot",
+            module = "blink-cmp-copilot",
+            score_offset = 100,
+            async = true,
+          },
+        },
+      },
+    },
+  },
 }
