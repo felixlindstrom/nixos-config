@@ -1,14 +1,14 @@
 { config, pkgs, ... }:
 {
-    networking.networkmanager.enable = true;
+  networking.networkmanager.enable = true;
 
-    services.resolved.enable = true;
+  # services.resolved.enable = true;
 
-    services.tailscale = {
-        enable = true;
-        extraUpFlags = [
-            "--operator=felix"
-            "--accept-routes=true" # Not sure this works as intended. Had to do it manually.
-        ];
-    };
+  services.tailscale = {
+    enable = true;
+    extraUpFlags = [
+      "--operator=felix"
+      "--accept-routes=true" # Not sure this works as intended. Had to do it manually.
+    ];
+  };
 }

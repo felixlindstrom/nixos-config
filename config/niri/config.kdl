@@ -57,7 +57,7 @@ layout {
         proportion 0.66667
     }
 
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.33333; }
 
     focus-ring {
       off
@@ -94,7 +94,8 @@ window-rule {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
-    slowdown 1.5
+    off
+    slowdown 0.7
 }
 
 window-rule {
