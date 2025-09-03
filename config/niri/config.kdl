@@ -43,7 +43,7 @@ input {
 }
 
 layout {
-    gaps 5
+    gaps 3
     center-focused-column "never"
     always-center-single-column
 
@@ -94,7 +94,7 @@ window-rule {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
-    off
+    // off
     slowdown 0.7
 }
 

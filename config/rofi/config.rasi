@@ -13,7 +13,7 @@ configuration {
 }
 
 * {
-    bg: #262828;
+    bg: #080808;
     bg-alt-1: #2E2E2E;
     bg-dark: #1D2021;
     bg-alt-2: #99917f;
@@ -28,14 +28,17 @@ configuration {
 }
 
 window {
-    width: 15%;
-    border: 0;
+    width: 800px;
+    border: 1px;
+    border-color: rgba(255, 255, 255, 0.2);
     background-color: @bg;
     padding: 0.5em;
 }
 
 mainbox {
     background-color: @bg;
+    border: 0;
+    padding: 10px;
     children: [inputbar, listview];
 }
 

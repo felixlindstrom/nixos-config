@@ -12,6 +12,7 @@
     pkgs.rofi-wayland
     pkgs.hyprpaper
     pkgs.pinentry-curses
+    pkgs.bazecor
     (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
 
     pkgs.brightnessctl

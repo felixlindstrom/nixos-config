@@ -4,6 +4,7 @@
     ./environment.nix
     ./packages
     ./programs
+    ./security.nix
   ];
 
   programs.home-manager.enable = true;
