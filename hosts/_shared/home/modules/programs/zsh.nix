@@ -66,6 +66,7 @@
       "gc!" = "git commit --amend";
       gcb = "git checkout -b";
       gcmsg = "git commit -m";
+      gcm = "git checkout main";
 
       # Random
       y = "yazi";

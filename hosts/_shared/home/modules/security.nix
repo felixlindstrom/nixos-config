@@ -9,5 +9,17 @@
   };
   programs.gpg = {
     enable = true;
+    homedir = "${config.xdg.dataHome}/gnupg";
+    settings = {
+      keyserver = "hkp://keys.gnupg.net";
+      use-agent = true;
+      keyserver-options = "auto-key-retrieve";
+      default-key = "DB2D6BB84D8E0309";
+    };
   };
+
+  home.packages = [
+    pkgs.gcr
+    pkgs.polkit_gnome
+  ];
 }

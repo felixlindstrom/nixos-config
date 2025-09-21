@@ -9,11 +9,12 @@
     ./git.nix
     ./go.nix
     ./java.nix
+    ./kicad.nix
     ./neovim.nix
     ./node.nix
     ./rofi.nix
-    ./ssh.nix
     ./rust.nix
+    ./ssh.nix
     ./starship.nix
     ./wezterm.nix
     ./wm.nix

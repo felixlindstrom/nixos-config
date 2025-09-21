@@ -1,10 +1,12 @@
 {
   pkgs,
   ...
-}: let
-  tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
+}:
+let
+  tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
   niri-session = "${pkgs.niri}/share/wayland-sessions";
-in {
+in
+{
   # services.xserver.displayManager.gdm.enable = true;
 
   services.greetd = {

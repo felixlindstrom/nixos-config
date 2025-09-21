@@ -43,7 +43,7 @@ input {
 }
 
 layout {
-    gaps 3
+    gaps 0
     center-focused-column "never"
     always-center-single-column
 
@@ -81,7 +81,7 @@ environment {
 }
 spawn-at-startup "waybar"
 spawn-at-startup "hyprpaper"
-spawn-at-startup "sane-break"
+// spawn-at-startup "sane-break"
 
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"

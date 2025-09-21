@@ -9,7 +9,7 @@
     pkgs.neovim
     pkgs.wezterm
     pkgs.wireplumber
-    pkgs.rofi-wayland
+    pkgs.rofi
     pkgs.hyprpaper
     pkgs.pinentry-curses
     pkgs.bazecor
