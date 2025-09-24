@@ -1,6 +1,0 @@
-{ ... }:
-{
-  programs.kicad = {
-    enable = true;
-  };
-}
