@@ -4,13 +4,14 @@
     ./api.nix
     ./chat.nix
     ./cursor.nix
-    ./notifications.nix
     ./development.nix
     ./ergo.nix
     ./essentials.nix
     ./fonts.nix
     ./insomnia.nix
+    ./kicad.nix
     ./media.nix
+    ./notifications.nix
     ./office.nix
     ./system.nix
     ./utils.nix

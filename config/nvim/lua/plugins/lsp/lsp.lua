@@ -76,10 +76,14 @@ return {
           capabilities = vim.deepcopy(capabilities),
         }, server_opts)
 
-        -- Add blink
+        -- Add blink capabilities
         final_opts.capabilities = require("blink.cmp").get_lsp_capabilities(final_opts.capabilities)
 
-        require("lspconfig")[server].setup(final_opts)
+        -- Define the config
+        vim.lsp.config(server, final_opts)
+
+        -- Enable it (autostarts when matching buffer is opened)
+        vim.lsp.enable(server)
       end
     end,
   },

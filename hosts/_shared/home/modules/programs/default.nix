@@ -9,7 +9,6 @@
     ./git.nix
     ./go.nix
     ./java.nix
-    ./kicad.nix
     ./neovim.nix
     ./node.nix
     ./rofi.nix
