@@ -28,6 +28,7 @@ in
       nodePackages_latest.prettier
       nodePackages_latest.jsonlint
       yamllint
+      helm-ls
     ];
   };
 

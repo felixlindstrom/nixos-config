@@ -4,7 +4,7 @@ let
 in
 {
   services.easyeffects = {
-    enable = true;
+    enable = false;
     preset = "thinkpad";
   };
 

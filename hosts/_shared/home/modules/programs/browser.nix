@@ -68,12 +68,7 @@ in
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/1password-x-password-manager/latest.xpi";
           installation_mode = "force_installed";
         };
-        # Paste urls
-        "open-multiple-urls" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4476814/open_multiple_urls-1.7.5.xpi";
-          installation_mode = "force_installed";
-        };
-        "foxytab" = {
+        "foxytab@eros.man" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/file/4066782/foxytab-2.31.xpi";
           installation_mode = "force_installed";
         };

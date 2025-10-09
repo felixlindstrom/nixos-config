@@ -53,6 +53,7 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp194s0.useDHCP = lib.mkDefault true;
 
+  hardware.enableRedistributableFirmware = true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
