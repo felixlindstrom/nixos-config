@@ -9,5 +9,7 @@
 
     # Needed for Niri, to have working file chooser dialogs.
     pkgs.nautilus
+
+    # pkgs.sunsetr
   ];
 }

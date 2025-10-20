@@ -3,7 +3,8 @@
   ...
 }:
 let
-  tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
+  # tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
+  tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
   niri-session = "${pkgs.niri}/share/wayland-sessions";
 in
 {

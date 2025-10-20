@@ -26,10 +26,12 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
       "williamboman/mason.nvim",
-      opts = { ensure_installed = {
-        -- "ruff", -- Installed through nix
-        "pyright"
-      } },
+      opts = {
+        ensure_installed = {
+          -- "ruff", -- Installed through nix
+          "pyright",
+        },
+      },
     },
     opts = {
       servers = {
@@ -78,24 +80,24 @@ return {
       },
     },
   },
-  {
-    "mfussenegger/nvim-dap",
-    dependencies = {
-      {
-        "williamboman/mason.nvim",
-        opts = { ensure_installed = { "debugpy" } },
-      },
-      {
-        "mfussenegger/nvim-dap-python",
-      -- stylua: ignore
-      keys = {
-        { "<leader>dPt", function() require('dap-python').test_method() end, desc = "Debug Method", ft = "python" },
-        { "<leader>dPc", function() require('dap-python').test_class() end, desc = "Debug Class", ft = "python" },
-      },
-        config = function()
-          require("dap-python").setup(get_pkg_path("debugpy", "/venv/bin/python"))
-        end,
-      },
-    },
-  },
+  -- {
+  --   "mfussenegger/nvim-dap",
+  --   dependencies = {
+  --     {
+  --       "williamboman/mason.nvim",
+  --       opts = { ensure_installed = { "debugpy" } },
+  --     },
+  --     {
+  --       "mfussenegger/nvim-dap-python",
+  --     -- stylua: ignore
+  --     keys = {
+  --       { "<leader>dPt", function() require('dap-python').test_method() end, desc = "Debug Method", ft = "python" },
+  --       { "<leader>dPc", function() require('dap-python').test_class() end, desc = "Debug Class", ft = "python" },
+  --     },
+  --       config = function()
+  --         require("dap-python").setup(get_pkg_path("debugpy", "/venv/bin/python"))
+  --       end,
+  --     },
+  --   },
+  -- },
 }

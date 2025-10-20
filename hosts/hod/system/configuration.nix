@@ -1,4 +1,10 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ./modules
@@ -6,5 +12,5 @@
 
   networking.hostName = "hod";
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 }

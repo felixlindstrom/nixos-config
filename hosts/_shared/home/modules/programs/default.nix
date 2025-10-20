@@ -12,7 +12,7 @@
     ./neovim.nix
     ./node.nix
     ./rofi.nix
-    ./rust.nix
+    # ./rust.nix
     ./ssh.nix
     ./starship.nix
     ./wezterm.nix
