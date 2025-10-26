@@ -14,6 +14,7 @@
 
   imports = [
     ./1password.nix
+    ./battery.nix
     ./bluetooth.nix
     ./boot.nix
     ./docker.nix
