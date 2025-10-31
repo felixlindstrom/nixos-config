@@ -13,6 +13,7 @@
     ./media.nix
     ./notifications.nix
     ./office.nix
+    ./organisation.nix
     ./system.nix
     ./utils.nix
   ];
