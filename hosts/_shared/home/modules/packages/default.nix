@@ -1,6 +1,7 @@
 { pkgs, config, ... }:
 {
   imports = [
+    ./3dprint.nix
     ./api.nix
     ./chat.nix
     ./cursor.nix
