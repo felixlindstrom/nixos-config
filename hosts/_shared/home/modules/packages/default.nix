@@ -10,6 +10,7 @@
     ./essentials.nix
     ./fonts.nix
     ./insomnia.nix
+    ./java.nix
     ./kicad.nix
     ./media.nix
     ./notifications.nix

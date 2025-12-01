@@ -43,7 +43,7 @@ input {
 }
 
 layout {
-    gaps 0
+    gaps 1
     center-focused-column "never"
     always-center-single-column
 
@@ -114,9 +114,10 @@ window-rule {
     block-out-from "screen-capture"
 }
 
-window-rule {
-    match app-id="Slack"
-    block-out-from "screen-capture"
+layer-rule {
+  match namespace="^notifications$"
+
+  block-out-from "screen-capture"
 }
 
 overview {
@@ -146,6 +147,10 @@ binds {
 
     Mod+O { toggle-overview; }
 
+    // Mod+H     { focus-column-or-monitor-left; }
+    // Mod+J     { focus-window-or-workspace-down; }
+    // Mod+K     { focus-window-or-workspace-up; }
+    // Mod+L     { focus-column-or-monitor-right; }
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
     Mod+K     { focus-window-up; }
