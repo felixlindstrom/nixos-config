@@ -16,7 +16,7 @@
 
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.nerd-fonts.symbols-only
-    pkgs.noto-fonts-emoji
-    pkgs.noto-fonts-extra
+    # pkgs.noto-fonts-emoji
+    pkgs.noto-fonts
   ];
 }

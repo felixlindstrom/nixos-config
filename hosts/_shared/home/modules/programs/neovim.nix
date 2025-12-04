@@ -26,7 +26,6 @@ in
       stylua
       vtsls
       nodePackages_latest.prettier
-      nodePackages_latest.jsonlint
       yamllint
       helm-ls
     ];

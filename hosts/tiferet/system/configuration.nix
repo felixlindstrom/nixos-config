@@ -21,7 +21,7 @@
 
   networking.hostName = "tiferet";
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 
   nix.extraOptions = ''
     extra-substituters = https://devenv.cachix.org

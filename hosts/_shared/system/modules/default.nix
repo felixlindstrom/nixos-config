@@ -28,7 +28,7 @@
     ./npm.nix
     ./packages.nix
     ./security.nix
-    ./sentinelone.nix
+    # ./sentinelone.nix
     ./services.nix
     ./users.nix
     ./wm/niri.nix
