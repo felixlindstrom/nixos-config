@@ -1,8 +1,24 @@
 { config, pkgs, ... }:
 {
-  networking.networkmanager.enable = true;
+  networking = {
+    networkmanager = {
+      enable = true;
+      dns = "none";
+      insertNameservers = [
+        "1.1.1.1"
+        "8.8.8.8"
+        "100.100.100.100"
+      ];
+    };
+    useDHCP = false;
+    dhcpcd.enable = false;
 
-  # services.resolved.enable = true;
+    nameservers = [
+      "100.100.100.100"
+      "1.1.1.1"
+      "8.8.8.8"
+    ];
+  };
 
   services.tailscale = {
     enable = true;
