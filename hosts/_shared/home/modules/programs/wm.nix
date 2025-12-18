@@ -1,4 +1,9 @@
+{ pkgs, ... }:
 {
+  home.packages = [
+    pkgs.ironbar
+  ];
+
   programs.waybar = {
     enable = true;
   };

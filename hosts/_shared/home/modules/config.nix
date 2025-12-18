@@ -16,6 +16,7 @@ in
     ".config/mako".source = "${configDir}/mako";
     ".config/rofi".source = "${configDir}/rofi";
     ".config/waybar".source = "${configDir}/waybar";
+    ".config/ironbar".source = "${configDir}/ironbar";
     ".config/wezterm".source = "${configDir}/wezterm";
     "bin".source = "${binDir}";
     "wallpapers".source = "${assetsDir}/wallpapers";
