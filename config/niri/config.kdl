@@ -43,7 +43,7 @@ input {
 }
 
 layout {
-    gaps 1
+    gaps 5
     center-focused-column "never"
     always-center-single-column
 
