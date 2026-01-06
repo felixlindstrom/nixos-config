@@ -11,12 +11,14 @@ in
 {
   xdg.configFile."starship.toml".source = linkConfig "starship.toml";
   xdg.configFile."niri/config.kdl".source = linkConfig "niri/config.kdl";
+  xdg.configFile."fuzzel/fuzzel.ini".source = linkConfig "fuzzel/fuzzel.ini";
   xdg.configFile."hypr".source = linkConfig "hypr";
   home.file = {
     ".config/mako".source = "${configDir}/mako";
     ".config/rofi".source = "${configDir}/rofi";
     ".config/waybar".source = "${configDir}/waybar";
     ".config/ironbar".source = "${configDir}/ironbar";
+    ".config/foot".source = "${configDir}/foot";
     ".config/wezterm".source = "${configDir}/wezterm";
     "bin".source = "${binDir}";
     "wallpapers".source = "${assetsDir}/wallpapers";
