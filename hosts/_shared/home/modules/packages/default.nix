@@ -1,7 +1,6 @@
 { pkgs, config, ... }:
 {
   imports = [
-    ./3dprint.nix
     ./api.nix
     ./chat.nix
     ./cursor.nix
@@ -16,6 +15,7 @@
     ./notifications.nix
     ./office.nix
     ./organisation.nix
+    ./quickshell.nix
     ./system.nix
     ./utils.nix
   ];
