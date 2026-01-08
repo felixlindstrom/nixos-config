@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# List windows from niri, format as: "<id>\t<title>"
+choice="$(
+  niri msg --json windows \
+  | jq -r '
+      .[]
+      | "\(.id)\t\(.title // "untitled")"
+    ' \
+  | fuzzel --dmenu --prompt="window > " \
+  | cut -f1
+)"
+
+[ -n "${choice:-}" ] && niri msg action focus-window --id "$choice" >/dev/null
+
