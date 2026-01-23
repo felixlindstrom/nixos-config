@@ -2,6 +2,7 @@
 {
   imports = [
     ./api.nix
+    ./zeditor.nix
     ./chat.nix
     ./cursor.nix
     ./development.nix
@@ -10,7 +11,7 @@
     ./fonts.nix
     ./insomnia.nix
     ./java.nix
-    ./kicad.nix
+    # ./kicad.nix
     ./media.nix
     ./notifications.nix
     ./office.nix
