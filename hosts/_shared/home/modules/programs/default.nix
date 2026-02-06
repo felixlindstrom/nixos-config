@@ -1,18 +1,19 @@
 { inputs, ... }:
 {
   imports = [
+    # ./rust.nix
     ./browser.nix
     ./clipboard.nix
     ./csv.nix
     ./databases.nix
     ./dev.nix
+    ./fuzzel.nix
     ./git.nix
     ./go.nix
     ./java.nix
     ./neovim.nix
     ./node.nix
     ./rofi.nix
-    # ./rust.nix
     ./ssh.nix
     ./starship.nix
     ./wezterm.nix

@@ -95,7 +95,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
     // off
-    slowdown 0.7
+    slowdown 0.3
 }
 
 window-rule {
@@ -128,13 +128,15 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return { spawn "wezterm"; }
-    Mod+D { spawn "rofi" "-modi" "drun,calc" "-show" "drun"; }
-    Mod+Tab { spawn "rofi" "-modi" "window" "-show" "window"; }
+    Mod+D { spawn "fuzzel"; }
+    Mod+Tab { spawn "niri-window"; }
     Mod+Q { close-window; }
 
     // CLipboard
-    Mod+V { spawn "sh" "-c" "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
+    Mod+V { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
     Mod+E { spawn "thunar"; }
+
+    Mod+Z { spawn "sh" "-c" "cd /home/felix/Projects ; ls | fuzzel --dmenu | xargs -r zeditor"; }
 
     // Media
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }

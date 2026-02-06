@@ -2,6 +2,12 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Enable setting the terminal title
+vim.opt.title = true
+
+-- %t = file name (tail), %f = relative path, %F = full path
+vim.opt.titlestring = "nvim : %F"
+
 local function bootstrap()
   local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
   if not (vim.uv or vim.loop).fs_stat(lazypath) then

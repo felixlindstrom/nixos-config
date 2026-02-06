@@ -6,5 +6,6 @@
     pkgs.mysql80
     pkgs.postgresql
     pkgs.google-cloud-sql-proxy
+    pkgs.python313Packages.sqlparse
   ];
 }

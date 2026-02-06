@@ -70,6 +70,8 @@
 
       # Random
       y = "yazi";
+
+      vim = "nvim";
     };
 
     plugins = [
@@ -135,6 +137,22 @@
       "--border"
       "--inline-info"
     ];
+    colors = {
+      "bg" = "#080808";
+      "bg+" = "#262626";
+      "border" = "#2e2e2e";
+      "fg" = "#b2b2b2";
+      "fg+" = "#e4e4e4";
+      "gutter" = "#262626";
+      "header" = "#80a0ff";
+      "hl+" = "#f09479";
+      "hl" = "#f09479";
+      "info" = "#cfcfb0";
+      "marker" = "#f09479";
+      "pointer" = "#ff5189";
+      "prompt" = "#80a0ff";
+      "spinner" = "#36c692";
+    };
     enable = true;
     # enableZshIntegration = true;
   };

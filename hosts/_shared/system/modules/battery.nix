@@ -17,7 +17,13 @@
         CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
 
         STOP_CHARGE_THRESH_BAT0 = 98;
+
+        WIFI_PWR_ON_AC = "off";
+        WIFI_PWR_ON_BAT = "off";
       };
+    };
+    upower = {
+      enable = false;
     };
   };
 }

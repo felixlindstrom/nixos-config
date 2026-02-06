@@ -7,6 +7,33 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
+    },
+    "model_parameters": []
+  },
+  "outline_panel": {
+    "folder_icons": false,
+    "file_icons": false
+  },
+  "project_panel": {
+    "drag_and_drop": false,
+    "starts_open": false,
+    "dock": "left",
+    "folder_icons": false,
+    "file_icons": false
+  },
+  "file_finder": {
+    "file_icons": false
+  },
+  "tabs": {
+    "git_status": false
+  },
+  "tab_bar": {
+    "show": false
+  },
   "agent_buffer_font_size": 12.0,
   "features": {
     "edit_prediction_provider": "copilot",
@@ -23,8 +50,8 @@
   "ui_font_size": 14.0,
   "buffer_font_size": 12.0,
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Ayu Dark",
-    "dark": "One Dark",
+    "dark": "Moonfly",
   },
 }
