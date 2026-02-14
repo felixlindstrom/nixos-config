@@ -5,7 +5,6 @@
     ./packages
     ./programs
     ./security.nix
-    ./noctalia.nix
   ];
 
   programs.home-manager.enable = true;

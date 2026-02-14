@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = [
-    pkgs.quickshell
+    # pkgs.quickshell
   ];
 }

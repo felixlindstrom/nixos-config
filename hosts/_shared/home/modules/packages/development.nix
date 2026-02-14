@@ -20,5 +20,8 @@ in
     pkgs.nixpkgs-fmt
     pkgs.sops
     pkgs.terraform
+    pkgs.kubernetes-helm
+    pkgs.gh
+    pkgs.gcc
   ];
 }
