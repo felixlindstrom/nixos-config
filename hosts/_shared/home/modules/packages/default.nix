@@ -1,6 +1,7 @@
 { pkgs, config, ... }:
 {
   imports = [
+    ./ai.nix
     ./api.nix
     ./zeditor.nix
     ./chat.nix
