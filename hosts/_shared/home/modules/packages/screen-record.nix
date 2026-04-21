@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = [
-    pkgs.kooha
+    pkgs.obs-studio
   ];
 }

@@ -14,6 +14,7 @@ in
     pkgs.devenv
     pkgs.gnumake
     pkgs.jetbrains.datagrip
+    pkgs.pgcli
     pkgs.kubectl
     pkgs.kubectx
     pkgs.nil

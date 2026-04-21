@@ -20,6 +20,7 @@
     ./screen-record.nix
     ./system.nix
     ./utils.nix
+    ./work.nix
     ./zeditor.nix
   ];
 }

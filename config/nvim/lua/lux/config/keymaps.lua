@@ -182,3 +182,11 @@ for mode, mappings in pairs(maps) do
     vim.keymap.set(mode, m[1], m[2], options)
   end
 end
+
+-- Lazy
+local function insertFullPath()
+  local filepath = vim.fn.expand("%:p")
+  vim.fn.setreg("+", filepath) -- write to clipboard
+end
+
+vim.keymap.set("n", "<leader>pc", insertFullPath, { noremap = true, silent = true })

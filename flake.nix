@@ -4,6 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-25.11";
@@ -78,7 +79,11 @@
       homeConfigurations =
         let
           hmConfig = home-manager.lib.homeManagerConfiguration;
-          extraSpecialArgs = { inherit inputs outputs; };
+          pkgs-unstable = import inputs.nixpkgs-unstable {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+          extraSpecialArgs = { inherit inputs outputs pkgs-unstable; };
         in
         {
           "felix@malkuth" = hmConfig {

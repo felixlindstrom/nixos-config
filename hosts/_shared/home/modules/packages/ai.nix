@@ -1,7 +1,4 @@
-{ pkgs, inputs, ... }:
-let
-  pkgs-unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
-in
+{ pkgs-unstable, ... }:
 {
   home.packages = [
     pkgs-unstable.claude-code

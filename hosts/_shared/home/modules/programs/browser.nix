@@ -14,6 +14,10 @@ let
   };
 in
 {
+  programs.chromium = {
+    enable = false;
+  };
+
   programs.firefox = {
     enable = true;
     languagePacks = [
@@ -99,6 +103,16 @@ in
         "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
         "browser.tabs.inTitlebar" = lock-zero;
+
+        # Hardware video acceleration (VA-API) — reduces CPU usage during video calls
+        "media.ffmpeg.vaapi.enabled" = lock-true;
+        "media.hardware-video-decoding.enabled" = lock-true;
+        "media.hardware-video-decoding.force-enabled" = lock-true;
+        "media.ffmpeg.vaapi-drm-display.enabled" = lock-true;
+        "media.webrtc.hw.h264.enabled" = lock-true;
+        "media.getusermedia.noise_suppression" = lock-false;
+        "media.getusermedia.aec_enabled" = lock-false;
+        "gfx.webrender.all" = lock-true;
       };
     };
   };

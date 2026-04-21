@@ -23,7 +23,7 @@
       };
     };
     upower = {
-      enable = false;
+      enable = true;
     };
   };
 }

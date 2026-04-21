@@ -119,8 +119,11 @@
     ];
 
     initContent = "
+      autoload -Uz edit-command-line
+      zle -N edit-command-line
       zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
       zvm_after_init_commands+=(eval \"$(fzf --zsh)\")
+      zvm_after_init_commands+=(\"bindkey '^v' edit-command-line\")
     ";
   };
 

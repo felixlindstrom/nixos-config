@@ -13,6 +13,7 @@
   };
 
   imports = [
+    ./sentinelone.nix
     ./1password.nix
     ./battery.nix
     ./bluetooth.nix
@@ -21,14 +22,15 @@
     ./environment.nix
     ./file-manager.nix
     ./gpg.nix
+    ./gpu.nix
     ./greeter.nix
     ./i18n.nix
     ./networking.nix
     ./nixsettings.nix
     ./npm.nix
     ./packages.nix
+    ./printer.nix
     ./security.nix
-    # ./sentinelone.nix
     ./services.nix
     ./users.nix
     ./wm/niri.nix

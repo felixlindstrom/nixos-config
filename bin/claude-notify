@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ -z "${WEZTERM_PANE:-}" ]; then
+  notify-send "Claude Code" "Needs your input"
+  exit 0
+fi
+
+PANE_ID="$WEZTERM_PANE"
+
+# Send notification immediately, look up window only if clicked
+ACTION=$(notify-send --wait --action "default=Focus" "Claude Code" "Needs your input" 2>/dev/null)
+
+if [ "$ACTION" = "default" ]; then
+  TTY=$(wezterm cli list --format json 2>/dev/null | jq -r --argjson p "$PANE_ID" \
+    '[.[] | select(.pane_id == $p)][0].tty_name // empty')
+
+  if [ -z "$TTY" ]; then exit 0; fi
+
+  MARKER="__claude_focus_${PANE_ID}__"
+  printf '\033]0;%s\007' "$MARKER" > "$TTY"
+  sleep 0.05
+
+  NIRI_ID=$(niri msg --json windows 2>/dev/null | \
+    jq --arg t "$MARKER" '[.[] | select(.title == $t)][0].id // empty')
+
+  printf '\033]0;\007' > "$TTY"
+
+  [ -n "$NIRI_ID" ] && niri msg action focus-window --id "$NIRI_ID"
+fi
