@@ -16,9 +16,4 @@
   };
 
   console.keyMap = "us";
-
-  services.xserver = {
-    enable = true;
-    xkb.layout = "us, se";
-  };
 }
