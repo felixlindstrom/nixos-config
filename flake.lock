@@ -348,11 +348,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1773389992,
-        "narHash": "sha256-wvfdLLWJ2I9oEpDd9PfMA8osfIZicoQ5MT1jIwNs9Tk=",
+        "lastModified": 1776548001,
+        "narHash": "sha256-ZSK0NL4a1BwVbbTBoSnWgbJy9HeZFXLYQizjb2DPF24=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c06b4ae3d6599a672a6210b7021d699c351eebda",
+        "rev": "b12141ef619e0a9c1c84dc8c684040326f27cdcc",
         "type": "github"
       },
       "original": {
@@ -371,7 +371,8 @@
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "sentinelone-deb": "sentinelone-deb",
-        "sentione": "sentione"
+        "sentione": "sentione",
+        "sops-nix": "sops-nix"
       }
     },
     "rust-analyzer-src": {
@@ -408,17 +409,36 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
+        "dirtyRev": "e9b17748178341fb1aa256c292a3f01204ba7b8d-dirty",
+        "dirtyShortRev": "e9b1774-dirty",
         "lastModified": 1773591490,
-        "narHash": "sha256-Cd8XzzzOEkEpgT6QynD0vOR/I6PlUK4Tu41qD5JizjE=",
-        "ref": "refs/heads/master",
-        "rev": "e9b17748178341fb1aa256c292a3f01204ba7b8d",
-        "revCount": 1,
+        "narHash": "sha256-Sd1Lob474KkTkSL6g2fymcEshmU7SfAEdxFjSKX5pLw=",
         "type": "git",
-        "url": "file:///home/felix/Projects/sentione"
+        "url": "file:///home/felix/Projects/sentione?a=1"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/felix/Projects/sentione"
+        "url": "file:///home/felix/Projects/sentione?a=1"
+      }
+    },
+    "sops-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1776771786,
+        "narHash": "sha256-DRFGPfFV6hbrfO9a1PH1FkCi7qR5FgjSqsQGGvk1rdI=",
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "rev": "bef289e2248991f7afeb95965c82fbcd8ff72598",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "type": "github"
       }
     },
     "systems": {

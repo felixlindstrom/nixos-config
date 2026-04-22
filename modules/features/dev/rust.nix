@@ -1,0 +1,16 @@
+{ pkgs, ... }:
+{
+  home-manager.users.felix = {
+    home.packages = [
+      (pkgs.fenix.complete.withComponents [
+        "cargo"
+        "clippy"
+        "rust-src"
+        "rustc"
+        "rustfmt"
+      ])
+      pkgs.rust-analyzer-nightly
+      pkgs.gcc
+    ];
+  };
+}
