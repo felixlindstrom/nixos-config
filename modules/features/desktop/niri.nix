@@ -9,7 +9,6 @@
 
   # Home-level
   home-manager.users.felix = {
-    programs.waybar.enable = true;
     programs.hyprlock.enable = true;
     services.hyprpaper = {
       enable = true;

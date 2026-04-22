@@ -1,3 +1,3 @@
-{ pkgs ? (import ../nixpkgs.nix) { } }: {
+{ pkgs }: {
   sane-break = pkgs.callPackage ./sane-break.nix { };
 }

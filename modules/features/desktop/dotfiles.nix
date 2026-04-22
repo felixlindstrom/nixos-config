@@ -18,8 +18,6 @@
       xdg.configFile."hypr/hyprlock.conf".source = linkConfig "hypr/hyprlock.conf";
       home.file = {
         ".config/mako".source = "${configDir}/mako";
-        ".config/rofi".source = "${configDir}/rofi";
-        ".config/waybar".source = "${configDir}/waybar";
         ".config/foot".source = "${configDir}/foot";
         ".config/wezterm".source = "${configDir}/wezterm";
         "bin".source = "${binDir}";
