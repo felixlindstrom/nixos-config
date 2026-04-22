@@ -12,8 +12,12 @@
     programs.waybar.enable = true;
     programs.hyprlock.enable = true;
     services.hyprpaper = {
-      enable = false;
-      settings.ipc = "on";
+      enable = true;
+      settings = {
+        ipc = "on";
+        preload = "~/wallpapers/wp3.jpeg";
+        wallpaper = ",~/wallpapers/wp3.jpeg";
+      };
     };
   };
 }

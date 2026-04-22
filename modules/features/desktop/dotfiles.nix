@@ -15,7 +15,7 @@
       xdg.configFile."niri/config.kdl".source = linkConfig "niri/config.kdl";
       xdg.configFile."fuzzel".source = linkConfig "fuzzel";
       xdg.configFile."zed".source = linkConfig "zed";
-      xdg.configFile."hypr".source = linkConfig "hypr";
+      xdg.configFile."hypr/hyprlock.conf".source = linkConfig "hypr/hyprlock.conf";
       home.file = {
         ".config/mako".source = "${configDir}/mako";
         ".config/rofi".source = "${configDir}/rofi";
