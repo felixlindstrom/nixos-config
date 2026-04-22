@@ -31,17 +31,19 @@
     };
   };
 
-  outputs = { nixpkgs, ... }@inputs:
-  let
-    mkHost = hostModule: nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [ hostModule ];
+  outputs =
+    { nixpkgs, ... }@inputs:
+    let
+      mkHost =
+        hostModule:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [ hostModule ];
+        };
+    in
+    {
+      nixosConfigurations = {
+        tiferet = mkHost ./hosts/tiferet;
+      };
     };
-  in
-  {
-    nixosConfigurations = {
-      netsah  = mkHost ./hosts/netsah;
-      tiferet = mkHost ./hosts/tiferet;
-    };
-  };
 }
