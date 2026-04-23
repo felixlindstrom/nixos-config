@@ -1,6 +1,6 @@
-{ ... }:
+{ config, ... }:
 let
-  easyEffectsDir = ../../../hosts/tiferet/assets/easyeffects;
+  easyEffectsDir = ../../../hosts + "/${config.networking.hostName}/assets/easyeffects";
 in
 {
   home-manager.users.felix = {

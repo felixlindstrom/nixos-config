@@ -1,12 +1,6 @@
 { pkgs, ... }:
 {
-  home-manager.users.felix = { config, ... }:
-  let
-    mkooss = config.lib.file.mkOutOfStoreSymlink;
-    linkConfig = filePath: mkooss "${config.home.homeDirectory}/Projects/nixos-config/config/${filePath}";
-  in
-  {
-    xdg.configFile."nvim".source = linkConfig "nvim";
+  home-manager.users.felix = {
     programs.neovim = {
       enable = true;
       extraPackages = with pkgs; [

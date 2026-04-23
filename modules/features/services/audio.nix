@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   services.pipewire = {
     enable = true;
@@ -7,4 +7,7 @@
     pulse.enable = true;
     wireplumber.enable = true;
   };
+
+  # pactl client for volume control (wpctl from wireplumber is currently segfaulting)
+  environment.systemPackages = [ pkgs.pulseaudio ];
 }
